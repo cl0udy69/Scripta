@@ -24,7 +24,8 @@ public class Client {
             "The Lands of Ice and Fire", "The Sons of the Dragon", "A Song for Lya", 
             "The Wit and Wisdom of Tyrion Lannister", "Ice Dragon", "In the House of the Worm", 
             "A Knight of the Seven Kingdoms", "A Dance With Dragons: Part 2 After the Feast (A Song of Ice and Fire, Book 5)", "Songs of Love and Death", 
-            ""}
+            "With Morning Comes Mistfall", "Songs of the Dying Earth", "Dark Visions", 
+            "Aces Abroad", "A Storm of Swords: Part 1 Steel and Snow (A Song of Ice and Fire, Book 3) "}
         };
     }
 }
