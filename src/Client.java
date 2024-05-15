@@ -37,7 +37,6 @@ public class Client {
             "Aces Abroad", "A Storm of Swords: Part 1 Steel and Snow (A Song of Ice and Fire, Book 3)", "The Second Kind of Loneliness"}
         };
         System.out.println("View All Authors");
-        System.out.println("View Specific Author");
         selection = scanner.nextLine();
 
         if (selection.equalsIgnoreCase("view all authors") || (selection.equalsIgnoreCase("authors")) ||
