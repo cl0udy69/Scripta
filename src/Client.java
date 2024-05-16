@@ -1,8 +1,10 @@
 import java.util.Scanner;
+
 public class Client {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String selection;
+        String chooseAuthor;
 
         String[][] authors = {
             {"George RR Martin", "J.R.R. Tolkein", "Aurthur C. Clarke", "George Orwell", "James Patterson"},
@@ -15,7 +17,7 @@ public class Client {
             {"Naom Chomsky", "Mary Wollstonecraft", "Giacomo Casanova", "Albert Camus"},
             {"Upton Sinclair", "Douglas Adams", "Elie Weisel", "J.J. Abrams"},
             {"Jacqueline Susann", "Aristotle", "Friedrich Nietzsche", "Karl Marx"},
-            {"Fredrick Engles", "Voltaire", "Socrates", "John Grisham"}
+            {"Fredrick Engles", "Voltaire", "Socrates", "John Grisham"},
         };
 
         String[][] georgeRRMartin = {
@@ -39,14 +41,14 @@ public class Client {
         System.out.println("View All Authors");
         selection = scanner.nextLine();
 
-        if (selection.equalsIgnoreCase("view all authors") || (selection.equalsIgnoreCase("authors")) ||
-            selection.equalsIgnoreCase("view authors")) {
-                for (int row = 0; row < 11; row++) {
-                    for (int column = 0; column < 4; column++) {
-                        System.out.println(authors[row][column]);
-                }
+        if (selection.equalsIgnoreCase("view all authors") || selection.equalsIgnoreCase("view authors")) {
+            for (int row = 0; row < 11; row++) {
+                for (int column = 0; column < 4; column++) {
+                    System.out.println(authors[row][column]);
+                }   
             }
+            System.out.println("Enter the name of the author whose books you want to see: ");
+            chooseAuthor = scanner.nextLine();
         }
-        scanner.close();
     }
 }
