@@ -59,7 +59,21 @@ public class Client {
             {"Eriol's song John Ronald Reuel Tolkien", "Beowulf: The Monsters and the Critics", "The Nature of Middle-earth", "The Lay of Aotrou and Itroun"},
             {"The Hobbit. Illustrated", "The Lord of the Rings (3 Book Box Set) John Ronald Reuel Tolkien", "Bilbo's Last Song"}
         };
-        
+
+        String[][] aurthurCClarke = {
+            {"Aurthur C. Clarke"},
+            {"Rendezvous with Rama", "Childhood's End", "2001: A Space Odyssey", "2010: Odyssey Two"},
+            {"The Sentinel", "2061: Odyssey Three", "Rama II", "3001: The Final Odyssey"},
+            {"The City and the Stars", "The Garden of Rama", "The Fountains of Paradise", "Rama Revealed"},
+            {"The Collected Stories of Arthur C. Clarke", "The Nine Billion Names of God", "Rendezvous with Rama. Arthur C. Clarke", "The Songs of Distant Earth"},
+            {"A Fall of Moondust", "The Sands of Mars", "Childhood's End: By Arthur C. Clarke", "The Hammer of God"},
+            {"Time's Eye", "Profiles of the Future", "Rescue Party", "Imperial Earth"},
+            {"Earthlight Arthur C. Clarke", "If I Forget Thee, Oh Earth", "The Deep Range", "Dog Star"},
+            {"Expedition to Earth", "Superiority (short story)", "Against the Fall of Night", "Encounter in the Dawn"},
+            {"The Light of Other Days", "The Last Theorem", "A Meeting with Medusa", "Dolphin Island"},
+            {"Firstborn (Clarke and Baxter novel)", ""}
+        };
+
         System.out.println("View All Authors");
         System.out.println("Specific Author");
         selection = scanner.nextLine();
