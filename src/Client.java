@@ -7,11 +7,13 @@ public class Client {
         String selection;
         String chooseAuthor;
 
+        int a;
+        int b;
         int i;
         int j;
-        int x;
-        int y;
         int w;
+        int y;
+        int x;
         int z;
 
         String[][] authors = {
@@ -71,7 +73,10 @@ public class Client {
             {"Earthlight Arthur C. Clarke", "If I Forget Thee, Oh Earth", "The Deep Range", "Dog Star"},
             {"Expedition to Earth", "Superiority (short story)", "Against the Fall of Night", "Encounter in the Dawn"},
             {"The Light of Other Days", "The Last Theorem", "A Meeting with Medusa", "Dolphin Island"},
-            {"Firstborn (Clarke and Baxter novel)", ""}
+            {"Firstborn (Clarke and Baxter novel)", "Cradle", "The Wind from the Sun", "Islands in the Sky Arthur C. Clarke"},
+            {"Tales of Ten Worlds", "The Lost Worlds of 2001", "Tales from the White Hart", "Richter 10"},
+            {"Prelude to Space", "2001 odisseia no espaç Arthur C. Clarke", "Breaking Strain Arthur C. Clarke", "Dial F for Frankenstein"},
+            {"Jupiter Five","The Ghost from the Grand Banks", "Tales from Planet Earth"}
         };
 
         System.out.println("View All Authors");
@@ -101,6 +106,10 @@ public class Client {
                         System.out.println("- " + jrrTolkein[w][z]);
                     }
                 }   
+            } else if (chooseAuthor.equalsIgnoreCase("Aurthur C. Clarke") || (chooseAuthor.equalsIgnoreCase("Aurthur C Clarke"))) {
+                for (a = 1; a < aurthurCClarke.length; a++) {
+                    
+                }
             }
         } 
     }
