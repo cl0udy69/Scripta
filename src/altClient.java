@@ -1,37 +1,15 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-public class Client {
+public class altClient {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        // Using a Map to store author names and their respective books
+        Map<String, String[][]> authorsMap = new HashMap<>();
         
-        String selection;
-        String chooseAuthor;
-
-        int a;
-        int b;
-        int i;
-        int j;
-        int w;
-        int y;
-        int x;
-        int z;
-
-        String[][] authors = {
-            {"George RR Martin", "J.R.R. Tolkein", "Aurthur C. Clarke", "George Orwell", "James Patterson"},
-            {"Stephen King", "Peter Suskind", "Ernest Hemingway", "J.K. Rowling"},
-            {"Kurt Vonnegut", "William Shakespear", "Harper Lee", "Charles Dickens"},
-            {"Fyodor Dostoevsky", "Franz Kafka", "Mark Twain", "Oscar Wilde"},
-            {"Charles Dickens", "Fyodor Dostoevsky", "Franz Kafka", "Mark Twain"},
-            {"Oscar Wilde", "Anne Frank", "Dr. Suess", "Slyvia Plath"},
-            {"Jacob Grimm", "John Steinbeck", "Mary Shelley", "H.P. Lovecraft"},
-            {"Naom Chomsky", "Mary Wollstonecraft", "Giacomo Casanova", "Albert Camus"},
-            {"Upton Sinclair", "Douglas Adams", "Elie Weisel", "J.J. Abrams"},
-            {"Jacqueline Susann", "Aristotle", "Friedrich Nietzsche", "Karl Marx"},
-            {"Fredrick Engles", "Voltaire", "Socrates", "John Grisham"},
-        };
-
-        String[][] georgeRRMartin = {
-            {"George R.R. Martin"},
+        authorsMap.put("george r.r. martin", new String[][] {
             {"A Game of Thrones", "The Winds of Winter", "Fire & Blood", "A Dance with Dragons" },
             {"The Hedge Knight", "A Dream of Spring", "A Storm of Swords", "A Clash of Kings"},
             {"A Feast for Crows", "Fevre Dream", "The Ice Dragon", "The Rise of the Dragon"},
@@ -43,10 +21,9 @@ public class Client {
             {"A Song for Lya", "The Wit and Wisdom of Tyrion Lannister", "Ice Dragon", "In the House of the Worm"},
             {"A Knight of the Seven Kingdoms", "A Dance With Dragons: Part 2 After the Feast (A Song of Ice and Fire, Book 5)", "Songs of Love and Death", "With Morning Comes Mistfall"},
             {"Songs of the Dying Earth", "Dark Visions", "Aces Abroad", "A Storm of Swords: Part 1 Steel and Snow (A Song of Ice and Fire, Book 3)"}
-        };
+        });
 
-        String[][] jrrTolkein = {
-            {"J.R.R. Tolkein"},
+        authorsMap.put("j.r.r. tolkien", new String[][] {
             {"The Lord of the Rings", "The Hobbit", "The Silmarillion", "The Fellowship of the Ring"},
             {"Unfinished Tales", "The Children of Hurin", "The Two Towers", "The Return of the King"},
             {"Beowulf: A Translation and Commentary", "The Fall of Gondolin", "The Adventures of Tom Bombadil"},
@@ -60,10 +37,9 @@ public class Client {
             {"Tolkien: Maker of Middle-earth", "The Return of the Shadow", "Goblin Feet", "The Lays of Beleriand"},
             {"Eriol's song John Ronald Reuel Tolkien", "Beowulf: The Monsters and the Critics", "The Nature of Middle-earth", "The Lay of Aotrou and Itroun"},
             {"The Hobbit. Illustrated", "The Lord of the Rings (3 Book Box Set) John Ronald Reuel Tolkien", "Bilbo's Last Song"}
-        };
+        });
 
-        String[][] aurthurCClarke = {
-            {"Aurthur C. Clarke"},
+        authorsMap.put("arthur c. clarke", new String[][] {
             {"Rendezvous with Rama", "Childhood's End", "2001: A Space Odyssey", "2010: Odyssey Two"},
             {"The Sentinel", "2061: Odyssey Three", "Rama II", "3001: The Final Odyssey"},
             {"The City and the Stars", "The Garden of Rama", "The Fountains of Paradise", "Rama Revealed"},
@@ -77,44 +53,62 @@ public class Client {
             {"Tales of Ten Worlds", "The Lost Worlds of 2001", "Tales from the White Hart", "Richter 10"},
             {"Prelude to Space", "2001 odisseia no espaç Arthur C. Clarke", "Breaking Strain Arthur C. Clarke", "Dial F for Frankenstein"},
             {"Jupiter Five","The Ghost from the Grand Banks", "Tales from Planet Earth"}
-        };
+        });
 
-        System.out.println("View All Authors");
-        System.out.println("Specific Author");
-        selection = scanner.nextLine();
+        authorsMap.put("george orwell", new String[][] {
+            {"Nineteen Eighty-Four", "Animal Farm", "Homage to Catalonia", "Politics and the English Language"},
+            {"Burmese Days", "Down and Out in Paris and London", "The Road to Wigan Pier", "Why I Write"},
+            {"Coming Up for Air", "A Hanging", "Keep the Aspidistra Flying", "George Orwell Essays"},
+            {"A Clergyman's Daughter", "Fascism and Democracy", "The Lion and the Unicorn: Socialism and the English Genius", "Notes on Nationalism"},
+            {"The Theory and Practice of Oligarchical Collectivism", "Inside the Whale and Other Essays", "A Nice Cup of Tea", "Inside the Whale"},
+            {"Inside the Whale", "How the Poor Die", "Fighting in Spain George Orwell", "Books v. Cigarettes"},
+            {"Such, Such Were the Joys", "The Complete Works of George Orwell", "The Poetry of George Orwell", "England Your England"},
+            {"As I Please", "Shooting an Elephant: and other essays", "Looking Back on the Spanish War", "All art is propaganda"}
+        });
 
-        if (selection.equalsIgnoreCase("view all authors") || selection.equalsIgnoreCase("")) {
-            for (i = 0; i < authors.length; i++) {
-                for (j = 0; j < authors[i].length; j++) {
-                    System.out.println("- " + authors[i][j]);
-                }
-            }
+        authorsMap.put("James Patterson", new String[][] {
             
-            System.out.println("Enter the name of the author whose books you want to see: ");
-            chooseAuthor = scanner.nextLine();
+        });
 
-            if (chooseAuthor.equalsIgnoreCase("George R.R. Martin") || (chooseAuthor.equalsIgnoreCase("George RR Martin"))) {
-                for (x = 1; x < georgeRRMartin.length; x++) {
-                    for (y = 0; y < georgeRRMartin[x].length; y++) {
-                        System.out.println("- " + georgeRRMartin[x][y]);
-                    }
+        // List of authors
+        String[] authors = {"George R.R. Martin", "J.R.R. Tolkien", "Arthur C. Clarke", "George Orwell"};
+
+        // Main program loop
+        while (true) {
+            System.out.println("View All Authors or Specific Author:");
+            String selection = scanner.nextLine().trim();
+
+            if (selection.equalsIgnoreCase("view all authors") || selection.equalsIgnoreCase("")) {
+                printAllAuthors(authors);
+
+                System.out.println("Enter the name of the author whose books you want to see: ");
+                String chooseAuthor = scanner.nextLine().trim().toLowerCase();
+
+                if (authorsMap.containsKey(chooseAuthor)) {
+                    printBooksByAuthor(chooseAuthor, authorsMap.get(chooseAuthor));
+                } else {
+                    System.out.println("Author not found.");
                 }
-            
-            } else if (chooseAuthor.equalsIgnoreCase("J.R.R Tolkein") || (chooseAuthor.equalsIgnoreCase("JRR Tolkein"))) {
-                for (w = 1; w < jrrTolkein.length; w++) {
-                    for (z = 0; z < jrrTolkein[w].length; z++) {
-                        System.out.println("- " + jrrTolkein[w][z]);
-                    }
-                }   
-            } else if (chooseAuthor.equalsIgnoreCase("Aurthur C. Clarke") || (chooseAuthor.equalsIgnoreCase("Aurthur C Clarke"))) {
-                for (a = 1; a < aurthurCClarke.length; a++) {
-                    for (b = 0; b < aurthurCClarke[a].length; b++) {
-                        System.out.println("- " + aurthurCClarke[a][b]);
-                    }
-                }
+            } else {
+                System.out.println("Invalid selection. Please try again.");
             }
-        } 
+        }
+    }
+
+    // Function to print all authors
+    public static void printAllAuthors(String[] authors) {
+        for (String author : authors) {
+            System.out.println("- " + author);
+        }
+    }
+
+    // Function to print books by a specific author
+    public static void printBooksByAuthor(String author, String[][] books) {
+        System.out.println("Books by " + author + ":");
+        for (String[] bookSet : books) {
+            for (String book : bookSet) {
+                System.out.println("- " + book);
+            }
+        }
     }
 }
-
-
